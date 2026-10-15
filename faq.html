@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | CI.EMME Giardini Giapponesi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-black: #1a1a1a;
+            --sage-green: #7a9a7a;
+            --sage-light: #a8c8a8;
+            --sage-dark: #5a7a5a;
+            --champagne: #c9a961;
+            --warm-white: #f5f3f0;
+            --light-gray: #e8e6e2;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--deep-black);
+            background: var(--warm-white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        h1 { font-size: 3.5rem; line-height: 1.1; }
+        h2 { font-size: 2.5rem; line-height: 1.2; }
+        h3 { font-size: 1.2rem; }
+
+        p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+        }
+
+        /* Header */
+        header {
+            background: var(--warm-white);
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            color: var(--deep-black);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.75rem;
+            position: relative;
+            min-width: 230px;
+        }
+
+        .logo-full-img {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 115px;
+            width: auto;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo-text {
+            display: flex;
+            align-items: baseline;
+            gap: 0.15em;
+        }
+
+        .logo-emme {
+            color: #a3453c;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        }
+
+        .jp-label {
+            color: #a3453c;
+            font-size: 1.4rem;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .logo-text-wrap {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.15;
+        }
+
+        .logo .jp-label {
+            margin-top: 0.15rem;
+            font-size: 0.9rem;
+        }
+
+        h1 .jp-label, h2 .jp-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: "Inter", sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            white-space: normal;
+        }
+
+        h1 .it-label, h2 .it-label {
+            display: block;
+            font-size: 0.75em;
+            font-weight: 400;
+        }
+
+        nav {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--deep-black);
+            font-size: 0.95rem;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--sage-green);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-header {
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--sage-green);
+            color: var(--sage-green);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-header:hover {
+            background: var(--sage-green);
+            color: var(--warm-white);
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+
+        .hamburger-menu span {
+            width: 25px;
+            height: 2px;
+            background: var(--deep-black);
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Main Content */
+        section {
+            padding: 6rem 5%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, var(--warm-white) 0%, #f9f7f4 100%);
+            text-align: center;
+        }
+
+        .intro h1 {
+            margin-bottom: 1rem;
+            color: var(--deep-black);
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .faq-item {
+            border-left: 3px solid var(--sage-green);
+            padding: 1.5rem;
+            background: var(--warm-white);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item.active {
+            background: linear-gradient(135deg, #f9f7f4 0%, var(--warm-white) 100%);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-question h3 {
+            color: var(--deep-black);
+            font-size: 1.1rem;
+        }
+
+        .faq-toggle {
+            color: var(--sage-green);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            margin-top: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            margin-top: 1rem;
+            overflow: visible;
+        }
+
+        .faq-answer p {
+            font-size: 0.98rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f0f0f;
+            color: var(--warm-white);
+            text-align: center;
+            padding: 2rem 5%;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 3rem;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 998;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .logo {
+                gap: 0.5rem;
+                min-width: 190px;
+            }
+
+            .logo-full-img {
+                height: 90px;
+            }
+
+            nav {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                background: var(--warm-white);
+                padding: 0;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                max-height: 0;
+                overflow-y: hidden;
+                visibility: hidden;
+                opacity: 0;
+                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+                z-index: 999;
+            }
+
+            nav.active {
+                max-height: 90vh;
+                overflow-y: auto;
+                padding: 1.5rem 1.5rem 3rem 1.5rem;
+                visibility: visible;
+                opacity: 1;
+            }
+
+            nav a {
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(26, 26, 26, 0.05);
+            }
+
+            h1 { font-size: 2.5rem; }
+
+            section {
+                padding: 3rem 5%;
+            }
+
+            .whatsapp-button {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="CI.EMME Giardini Giapponesi" class="logo-full-img">
+        </div>
+        <button class="hamburger-menu" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="chi-siamo.html">Chi siamo</a>
+            <a href="servizi.html">Servizi</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="metodo.html">Il nostro metodo</a>
+            <a href="articoli.html">Articoli</a>
+            <a href="faq.html">FAQ</a>
+            <a href="index.html#contact" class="cta-header">Contattaci</a>
+        </nav>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <h1><span class="jp-label">よくある質問</span><span class="it-label">Domande Frequenti</span></h1>
+        <p>Trova le risposte alle domande più comuni sui nostri servizi e sui giardini giapponesi.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Quanto tempo ci vuole per realizzare un giardino giapponese?</h3>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Il tempo varia in base alla complessità e alla dimensione del progetto. Un giardino di medie dimensioni richiede solitamente 4-8 settimane dalla consultazione iniziale alla consegna finale. Per progetti più ampi o complessi, i tempi possono essere più lunghi.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Quali sono i costi per un giardino giapponese?</h3>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>I costi dipendono da diversi fattori: dimensioni dello spazio, complessità del design, materiali scelti e elementi aggiunti. Forniamo preventivi personalizzati dopo una consultazione gratuita. Offriamo soluzioni per diversi budget mantenendo sempre standard qualitativi elevati.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Posso avere un giardino giapponese in uno spazio piccolo?</h3>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Assolutamente! Uno dei principi della filosofia Zen è l'armonia nello spazio minimalista. Creiamo giardini giapponesi in spazi di qualsiasi dimensione, dai piccoli balconi ai grandi terrazzamenti. Ogni spazio può diventare un'oasi di serenità.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Quale manutenzione richiede un giardino giapponese?</h3>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>La manutenzione dipende dagli elementi scelti. I giardini giapponesi richiedono in genere meno manutenzione rispetto ai giardini tradizionali grazie al design minimalista. Offriamo servizi di manutenzione premium per assicurare che il vostro giardino rimanga sempre perfetto.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Utilizzate materiali sostenibili?</h3>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sì, la sostenibilità è un valore fondamentale. Utilizziamo materiali ecologici, rocce naturali, piante native e pratiche costruttive sostenibili. Anche la filosofia Zen enfatizza l'armonia con la natura, quindi è naturale per noi adottare approcci ecologicamente responsabili.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Potete aiutarmi con il design se ho già uno spazio?</h3>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Certo! Offriamo consulenze di design basate su oltre 20 anni di esperienza diretta. Analizziamo il vostro spazio esistente e creiamo progetti personalizzati, sia in stile Zen che tradizionale, spiegandovi con chiarezza come apparirà il risultato finale prima di iniziare i lavori.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Contact Form Section -->
+    <section style="background: linear-gradient(135deg, #f9f7f4 0%, var(--warm-white) 100%); padding: 4rem 5%; border-top: 1px solid rgba(26, 26, 26, 0.1);">
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <h2 style="margin-bottom: 1rem; color: var(--deep-black);">Richiedi un preventivo</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Raccontaci il tuo progetto: ti risponderemo con una consulenza personalizzata.</p>
+        </div>
+
+        <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" style="max-width: 600px; margin: 0 auto; text-align: left;">
+            <input type="hidden" name="access_key" value="7b9ddbe1-8e87-46e0-8d83-3dd3e7a3b9d8">
+            <input type="hidden" name="subject" value="Nuova richiesta dal sito CI.EMME Giardini Giapponesi">
+            <input type="checkbox" name="botcheck" style="display:none">
+
+            <div style="margin-bottom: 1.2rem;">
+                <label style="display:block; margin-bottom: 0.4rem; font-size: 0.9rem; opacity: 0.8;">Nome e Cognome *</label>
+                <input type="text" name="name" required style="width:100%; padding: 0.9rem; border: 1px solid #ccc; background: var(--warm-white); font-family: 'Inter', sans-serif; font-size: 1rem;">
+            </div>
+
+            <div style="margin-bottom: 1.2rem;">
+                <label style="display:block; margin-bottom: 0.4rem; font-size: 0.9rem; opacity: 0.8;">Email *</label>
+                <input type="email" name="email" required style="width:100%; padding: 0.9rem; border: 1px solid #ccc; background: var(--warm-white); font-family: 'Inter', sans-serif; font-size: 1rem;">
+            </div>
+
+            <div style="margin-bottom: 1.2rem;">
+                <label style="display:block; margin-bottom: 0.4rem; font-size: 0.9rem; opacity: 0.8;">Telefono</label>
+                <input type="tel" name="phone" style="width:100%; padding: 0.9rem; border: 1px solid #ccc; background: var(--warm-white); font-family: 'Inter', sans-serif; font-size: 1rem;">
+            </div>
+
+            <div style="margin-bottom: 1.2rem;">
+                <label style="display:block; margin-bottom: 0.4rem; font-size: 0.9rem; opacity: 0.8;">Tipo di richiesta</label>
+                <select name="tipo_richiesta" style="width:100%; padding: 0.9rem; border: 1px solid #ccc; background: var(--warm-white); font-family: 'Inter', sans-serif; font-size: 1rem;">
+                    <option>Preventivo giardino giapponese esterno</option>
+                    <option>Preventivo giardino giapponese interno</option>
+                    <option>Consulenza di design</option>
+                    <option>Manutenzione premium</option>
+                    <option>Informazioni generali</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display:block; margin-bottom: 0.4rem; font-size: 0.9rem; opacity: 0.8;">Messaggio *</label>
+                <textarea name="message" rows="5" required placeholder="Descrivi il tuo progetto o le tue esigenze..." style="width:100%; padding: 0.9rem; border: 1px solid #ccc; background: var(--warm-white); font-family: 'Inter', sans-serif; font-size: 1rem; resize: vertical;"></textarea>
+            </div>
+
+            <div style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 0.6rem;">
+                <input type="checkbox" name="privacy_consent" id="privacyConsent" required style="margin-top: 0.3rem; flex-shrink: 0; width: 16px; height: 16px; accent-color: var(--sage-green);">
+                <label for="privacyConsent" style="font-size: 0.85rem; opacity: 0.8; line-height: 1.5;">Ho letto e accetto la <a href="privacy.html" target="_blank" style="color: var(--sage-green); text-decoration: underline;">Privacy Policy</a> e autorizzo il trattamento dei miei dati per essere ricontattato. *</label>
+            </div>
+            <button type="submit" style="display:inline-block; padding: 1rem 2.5rem; background: var(--sage-green); color: var(--warm-white); text-decoration: none; font-size: 1rem; transition: all 0.3s ease; border: 2px solid var(--sage-green); cursor: pointer; font-family: 'Inter', sans-serif; width: 100%;">Invia richiesta</button>
+
+            <p id="formResult" style="margin-top: 1rem; text-align: center; font-size: 0.95rem;"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="currentYear">2024</span> CI.EMME Giardini Giapponesi. | P.IVA 03120250166 | <a href="privacy.html" style="color: var(--sage-light); text-decoration: none;">Privacy Policy</a> | <a href="termini.html" style="color: var(--sage-light); text-decoration: none;">Terms</a></p>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/393487036996?text=Ciao%2C%20vorrei%20informazioni%20su%20CI.EMME%20Giardini%20Giapponesi" class="whatsapp-button" target="_blank" rel="noopener noreferrer" title="Contattaci su WhatsApp">
+        💬
+    </a>
+
+        <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner" style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.95); color: var(--warm-white); padding: 1.5rem 5%; box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); z-index: 1001; display: none; max-height: 180px; overflow-y: auto;">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 2rem;">
+            <div style="font-size: 0.9rem; opacity: 0.9; flex: 1;">
+                Utilizziamo cookie e tecnologie di tracciamento per migliorare la vostra esperienza e analizzare il traffico del sito. Leggi la nostra <a href="privacy.html" style="color: var(--sage-light); text-decoration: underline;">Informativa Privacy</a> per maggiori dettagli.
+            </div>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button id="cookieAccept" style="padding: 0.6rem 1.5rem; border: none; cursor: pointer; font-size: 0.9rem; background: var(--sage-green); color: var(--warm-white);">Accetta tutto</button>
+                <button id="cookieReject" style="padding: 0.6rem 1.5rem; border: 1px solid var(--warm-white); cursor: pointer; font-size: 0.9rem; background: transparent; color: var(--warm-white);">Rifiuta</button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .cookie-banner.show {
+            display: flex !important;
+        }
+    </style>
+
+<script>
+        // Aggiorna automaticamente l anno nel footer
+        const yearSpan = document.getElementById('currentYear');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+        // Cookie Banner
+        const cookieBanner = document.getElementById('cookieBanner');
+        const cookieAccept = document.getElementById('cookieAccept');
+        const cookieReject = document.getElementById('cookieReject');
+
+        if (cookieBanner && !localStorage.getItem('cookieConsent')) {
+            cookieBanner.classList.add('show');
+        }
+
+        if (cookieAccept) {
+            cookieAccept.addEventListener('click', () => {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieBanner.classList.remove('show');
+                loadGoogleAnalytics();
+                loadGoogleSearchConsole();
+            });
+        }
+
+        if (cookieReject) {
+            cookieReject.addEventListener('click', () => {
+                localStorage.setItem('cookieConsent', 'rejected');
+                cookieBanner.classList.remove('show');
+            });
+        }
+
+        function loadGoogleAnalytics() {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+        }
+
+        function loadGoogleSearchConsole() {
+            const meta = document.createElement('meta');
+            meta.name = 'google-site-verification';
+            meta.content = 'XXXXXXXXXXXXX';
+            document.head.appendChild(meta);
+        }
+
+
+        // Form preventivo
+        const quoteForm = document.getElementById('quoteForm');
+        if (quoteForm) {
+            quoteForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const formData = new FormData(quoteForm);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+                const resultEl = document.getElementById('formResult');
+                resultEl.style.color = 'var(--sage-green)';
+                resultEl.textContent = 'Invio in corso...';
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: json
+                })
+                .then(async (response) => {
+                    let jsonResponse = await response.json();
+                    if (response.status == 200) {
+                        resultEl.style.color = 'var(--sage-green)';
+                        resultEl.textContent = 'Richiesta inviata con successo! Ti risponderemo al più presto.';
+                        quoteForm.reset();
+                    } else {
+                        resultEl.style.color = '#c0392b';
+                        resultEl.textContent = jsonResponse.message || 'Errore nell\'invio. Riprova o scrivici via WhatsApp.';
+                    }
+                })
+                .catch(() => {
+                    resultEl.style.color = '#c0392b';
+                    resultEl.textContent = 'Errore di connessione. Riprova o scrivici via WhatsApp.';
+                });
+            });
+        }
+
+
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            hamburgerBtn.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Chiudi altri item
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Apri/chiudi questo item
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

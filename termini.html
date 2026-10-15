@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termini e Condizioni | CI.EMME Giardini Giapponesi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-black: #1a1a1a;
+            --sage-green: #7a9a7a;
+            --sage-light: #a8c8a8;
+            --sage-dark: #5a7a5a;
+            --champagne: #c9a961;
+            --warm-white: #f5f3f0;
+            --light-gray: #e8e6e2;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--deep-black);
+            background: var(--warm-white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        h1 { font-size: 3rem; line-height: 1.1; }
+        h2 { font-size: 1.7rem; line-height: 1.2; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--sage-dark); }
+        h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+
+        p, li {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin: 0 0 1rem 1.5rem;
+        }
+
+        strong {
+            opacity: 1;
+            font-weight: 600;
+        }
+
+        /* Header */
+        header {
+            background: var(--warm-white);
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            color: var(--deep-black);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.75rem;
+            position: relative;
+            min-width: 230px;
+        }
+
+        .logo-full-img {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 115px;
+            width: auto;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo-text {
+            display: flex;
+            align-items: baseline;
+            gap: 0.15em;
+        }
+
+        .logo-emme {
+            color: #a3453c;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        }
+
+        .jp-label {
+            color: #a3453c;
+            font-size: 1.4rem;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .logo-text-wrap {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.15;
+        }
+
+        .logo .jp-label {
+            margin-top: 0.15rem;
+            font-size: 0.9rem;
+        }
+
+        h1 .jp-label, h2 .jp-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: "Inter", sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            white-space: normal;
+        }
+
+        h1 .it-label, h2 .it-label {
+            display: block;
+            font-size: 0.75em;
+            font-weight: 400;
+        }
+
+        nav {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--deep-black);
+            font-size: 0.95rem;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--sage-green);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-header {
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--sage-green);
+            color: var(--sage-green);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-header:hover {
+            background: var(--sage-green);
+            color: var(--warm-white);
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+
+        .hamburger-menu span {
+            width: 25px;
+            height: 2px;
+            background: var(--deep-black);
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Main Content */
+        .intro {
+            background: linear-gradient(135deg, var(--warm-white) 0%, #f9f7f4 100%);
+            text-align: center;
+            padding: 6rem 5% 3rem;
+        }
+
+        .intro h1 {
+            margin-bottom: 1rem;
+            color: var(--deep-black);
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 5% 5rem;
+        }
+
+        .legal-content .last-update {
+            font-size: 0.9rem;
+            color: var(--sage-green);
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+        }
+
+        .info-box {
+            background: var(--warm-white);
+            border-left: 3px solid var(--sage-green);
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .info-box p {
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f0f0f;
+            color: var(--warm-white);
+            text-align: center;
+            padding: 2rem 5%;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--sage-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-section p {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 998;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 26, 26, 0.95);
+            color: var(--warm-white);
+            padding: 1.5rem 5%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            display: none;
+            max-height: 180px;
+            overflow-y: auto;
+        }
+
+        .cookie-banner.show {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .cookie-text {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            flex: 1;
+        }
+
+        .cookie-text a {
+            color: var(--sage-light);
+            text-decoration: underline;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cookie-btn {
+            padding: 0.6rem 1.5rem;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .cookie-accept {
+            background: var(--sage-green);
+            color: var(--warm-white);
+        }
+
+        .cookie-accept:hover {
+            background: var(--sage-dark);
+        }
+
+        .cookie-reject {
+            background: transparent;
+            color: var(--warm-white);
+            border: 1px solid var(--warm-white);
+        }
+
+        .cookie-reject:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .logo {
+                gap: 0.5rem;
+                min-width: 190px;
+            }
+
+            .logo-full-img {
+                height: 90px;
+            }
+
+            nav {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                background: var(--warm-white);
+                padding: 0;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                max-height: 0;
+                overflow-y: hidden;
+                visibility: hidden;
+                opacity: 0;
+                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+                z-index: 999;
+            }
+
+            nav.active {
+                max-height: 90vh;
+                overflow-y: auto;
+                padding: 1.5rem 1.5rem 3rem 1.5rem;
+                visibility: visible;
+                opacity: 1;
+            }
+
+            nav a {
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(26, 26, 26, 0.05);
+            }
+
+            h1 { font-size: 2.2rem; }
+
+            .intro {
+                padding: 3rem 5% 2rem;
+            }
+
+            .legal-content {
+                padding: 2rem 5% 3rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .cookie-banner.show {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .cookie-buttons {
+                width: 100%;
+            }
+
+            .whatsapp-button {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="CI.EMME Giardini Giapponesi" class="logo-full-img">
+        </div>
+        <button class="hamburger-menu" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="chi-siamo.html">Chi siamo</a>
+            <a href="servizi.html">Servizi</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="metodo.html">Il nostro metodo</a>
+            <a href="articoli.html">Articoli</a>
+            <a href="faq.html">FAQ</a>
+            <a href="index.html#contact" class="cta-header">Contattaci</a>
+        </nav>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <h1><span class="jp-label">利用規約</span><span class="it-label">Termini e Condizioni</span></h1>
+        <p>Condizioni generali di utilizzo del sito web e dei servizi offerti da CI.EMME Giardini Giapponesi.</p>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="legal-content">
+        <p class="last-update">Ultimo aggiornamento: Agosto 2026</p>
+
+        <div class="info-box">
+            <p><strong>Titolare del Sito:</strong> CI.EMME Giardini Giapponesi</p>
+            <p><strong>Indirizzo:</strong> Viale Italia 3, 24060 Villongo (BG)</p>
+            <p><strong>Partita IVA:</strong> 03120250166</p>
+            <p><strong>Email:</strong> <a href="mailto:info@ciemmegiardini.it" style="color: var(--sage-green);">info@ciemmegiardini.it</a></p>
+            <p><strong>Telefono:</strong> +39 348 703 6996</p>
+        </div>
+
+        <h2>1. Accettazione dei Termini</h2>
+        <p>L'accesso e la navigazione sul sito web di CI.EMME Giardini Giapponesi ("il Sito") implicano l'accettazione integrale dei presenti Termini e Condizioni. Qualora l'utente non concordasse con quanto stabilito, è invitato a non utilizzare il Sito.</p>
+
+        <h2>2. Oggetto del Sito</h2>
+        <p>Il Sito ha finalità informative e promozionali relative ai servizi offerti da CI.EMME Giardini Giapponesi: progettazione e realizzazione di giardini giapponesi esterni e interni, consulenza di design, manutenzione premium, installazione di sculture ed elementi decorativi, e creazione di spazi meditativi. Il Sito non consente l'acquisto o la prenotazione online di servizi: ogni richiesta inviata tramite il modulo di contatto o i recapiti indicati costituisce una richiesta di informazioni o preventivo, non un ordine vincolante.</p>
+
+        <h2>3. Richieste di Preventivo e Contatto</h2>
+        <p>I moduli presenti sul Sito consentono di inviare richieste di informazioni o preventivo. L'invio del modulo non genera alcun obbligo contrattuale a carico di CI.EMME Giardini Giapponesi, che si riserva di rispondere con una proposta commerciale personalizzata. Eventuali preventivi, tempistiche e condizioni economiche verranno definiti separatamente, per iscritto, tra le parti.</p>
+
+        <h2>4. Proprietà Intellettuale</h2>
+        <p>Tutti i contenuti presenti sul Sito — testi, immagini, fotografie dei progetti realizzati, loghi, grafiche ed elementi di design — sono di proprietà di CI.EMME Giardini Giapponesi o concessi in licenza d'uso, e sono protetti dalla normativa vigente in materia di diritto d'autore e proprietà industriale. È vietata la riproduzione, distribuzione, modifica o utilizzo dei contenuti del Sito senza previa autorizzazione scritta del Titolare, salvo i casi consentiti dalla legge.</p>
+
+        <h2>5. Uso Consentito del Sito</h2>
+        <p>L'utente si impegna a utilizzare il Sito in modo lecito e conforme ai presenti Termini, astenendosi da:</p>
+        <ul>
+            <li>Compiere attività che possano danneggiare, sovraccaricare o compromettere il funzionamento del Sito;</li>
+            <li>Inserire contenuti falsi, offensivi, illeciti o lesivi di diritti di terzi nei moduli di contatto;</li>
+            <li>Utilizzare sistemi automatizzati per estrarre dati dal Sito (scraping) senza autorizzazione;</li>
+            <li>Tentare di accedere in modo non autorizzato a parti riservate del Sito o ai sistemi correlati.</li>
+        </ul>
+
+        <h2>6. Limitazione di Responsabilità</h2>
+        <p>CI.EMME Giardini Giapponesi si impegna a mantenere aggiornati e corretti i contenuti del Sito, ma non garantisce l'assenza di errori, imprecisioni o interruzioni del servizio. Le immagini dei progetti realizzati hanno finalità illustrativa: il risultato finale di un progetto reale può variare in base a caratteristiche specifiche del luogo, materiali disponibili e accordi presi con il cliente. CI.EMME Giardini Giapponesi non è responsabile per danni diretti o indiretti derivanti dall'impossibilità di accedere al Sito o da malfunzionamenti tecnici non imputabili a propria colpa.</p>
+
+        <h2>7. Link a Siti Terzi</h2>
+        <p>Il Sito può contenere collegamenti a servizi esterni (WhatsApp, Google Maps, social network). CI.EMME Giardini Giapponesi non è responsabile dei contenuti, delle policy o delle pratiche di tali siti terzi, che sono regolati dai rispettivi termini e condizioni.</p>
+
+        <h2>8. Trattamento dei Dati Personali</h2>
+        <p>Il trattamento dei dati personali raccolti tramite il Sito è disciplinato dalla <a href="privacy.html" style="color: var(--sage-green);">Privacy Policy</a>, parte integrante dei presenti Termini e Condizioni.</p>
+
+        <h2>9. Modifiche ai Termini</h2>
+        <p>CI.EMME Giardini Giapponesi si riserva il diritto di modificare in qualsiasi momento i presenti Termini e Condizioni, pubblicando la versione aggiornata su questa pagina con indicazione della data di ultimo aggiornamento. L'uso continuato del Sito successivo alla pubblicazione delle modifiche costituisce accettazione delle stesse.</p>
+
+        <h2>10. Legge Applicabile e Foro Competente</h2>
+        <p>I presenti Termini e Condizioni sono regolati dalla legge italiana. Per qualsiasi controversia relativa all'interpretazione, validità o esecuzione dei presenti Termini, sarà competente il Foro del luogo di residenza o domicilio del consumatore, ove applicabile, oppure il Foro di Bergamo per le altre ipotesi previste dalla legge.</p>
+
+        <h2>11. Contatti</h2>
+        <p>Per qualsiasi domanda relativa ai presenti Termini e Condizioni, è possibile contattare:</p>
+        <div class="info-box">
+            <p><strong>CI.EMME Giardini Giapponesi</strong></p>
+            <p>Viale Italia 3, 24060 Villongo (BG)</p>
+            <p>Email: <a href="mailto:info@ciemmegiardini.it" style="color: var(--sage-green);">info@ciemmegiardini.it</a></p>
+            <p>Telefono: <a href="tel:+393487036996" style="color: var(--sage-green);">+39 348 703 6996</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CI.EMME Giardini Giapponesi</h4>
+                <p>Specialisti nella creazione di giardini giapponesi.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <p>Tel: +39 348 703 6996<br>Email: info@ciemmegiardini.it<br>Viale Italia 3, 24060 Villongo (BG)</p>
+            </div>
+            <div class="footer-section">
+                <h4>Partita IVA</h4>
+                <p>03120250166</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear">2026</span> CI.EMME Giardini Giapponesi. | <a href="privacy.html" style="color: var(--sage-light); text-decoration: none;">Privacy Policy</a> | <a href="termini.html" style="color: var(--sage-light); text-decoration: none;">Terms</a></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/393487036996?text=Ciao%2C%20vorrei%20informazioni%20su%20CI.EMME%20Giardini%20Giapponesi" class="whatsapp-button" target="_blank" rel="noopener noreferrer" title="Contattaci su WhatsApp">
+        💬
+    </a>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-text">
+            Utilizziamo cookie e tecnologie di tracciamento per migliorare la vostra esperienza e analizzare il traffico del sito. Leggi la nostra <a href="privacy.html">Informativa Privacy</a> per maggiori dettagli.
+        </div>
+        <div class="cookie-buttons">
+            <button class="cookie-btn cookie-accept" id="cookieAccept">Accetta tutto</button>
+            <button class="cookie-btn cookie-reject" id="cookieReject">Rifiuta</button>
+        </div>
+    </div>
+
+    <script>
+        // Aggiorna automaticamente l anno nel footer
+        const yearSpan = document.getElementById('currentYear');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+
+        // Hamburger Menu
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            hamburgerBtn.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+
+        // Cookie Banner
+        const cookieBanner = document.getElementById('cookieBanner');
+        const cookieAccept = document.getElementById('cookieAccept');
+        const cookieReject = document.getElementById('cookieReject');
+
+        if (!localStorage.getItem('cookieConsent')) {
+            cookieBanner.classList.add('show');
+        }
+
+        cookieAccept.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieBanner.classList.remove('show');
+            loadGoogleAnalytics();
+            loadGoogleSearchConsole();
+        });
+
+        cookieReject.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'rejected');
+            cookieBanner.classList.remove('show');
+        });
+
+        function loadGoogleAnalytics() {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+        }
+
+        function loadGoogleSearchConsole() {
+            const meta = document.createElement('meta');
+            meta.name = 'google-site-verification';
+            meta.content = 'XXXXXXXXXXXXX';
+            document.head.appendChild(meta);
+        }
+    </script>
+</body>
+</html>

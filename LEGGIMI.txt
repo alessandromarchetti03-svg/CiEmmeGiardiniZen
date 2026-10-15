@@ -1,0 +1,43 @@
+======================================
+CI.EMME GIARDINI GIAPPONESI - Archivio Sito
+======================================
+Versione aggiornata al 07/09/2026
+
+NOVITA' PRINCIPALI DI QUESTA VERSIONE:
+- Gerarchia titoli invertita in 9 pagine (homepage + chi-siamo, servizi,
+  portfolio, metodo, articoli, faq, privacy, termini): il titolo
+  giapponese ora sta SOPRA quello italiano, piu' grande e in grassetto
+  (2.2rem, peso 700); il titolo italiano sta sotto, ridotto al 75%
+  della dimensione del giapponese
+- Nuovo logo su tutte le 30 pagine: albero stilizzato con torii rosso,
+  fiume azzurro, testo "Ci EMME" e "GIARDINI GIAPPONESI" verde, sfondo
+  trasparente (file images/logo.png, GIA' INCLUSO in questo archivio)
+- Logo posizionato per essere grande senza ingrandire la barra di
+  navigazione (altezza desktop 115px, mobile 90px)
+- Etichetta giapponese rimossa dall'header (restava solo nel logo
+  stesso e nei titoli di pagina, come sopra descritto)
+
+STORICO NOVITA' PRECEDENTI:
+- REBRANDING COMPLETO: "Giardini Zen" -> "Giardini Giapponesi"
+- Colore rosso uniforme (#a3453c) per accenti giapponesi nel sito
+- Divisori tra sezioni testuali IT/JP con vocabolario Zen autentico
+- Email aggiornata: info@ciemmegiardini.it
+- Testi riscritti: focus su 20 anni di esperienza diretta
+- Portfolio dinamico: "In arrivo" / "Progetto illustrativo"
+- Checkbox privacy obbligatoria su tutti i form (28 pagine)
+- Partita IVA (03120250166) visibile nel footer di tutte le pagine
+- Social reali collegati: Instagram, Facebook, TikTok
+- Form di contatto funzionante con Web3Forms
+
+COME USARLO:
+1. Estrai questo archivio
+2. Carica TUTTO il contenuto (file HTML + cartelle images e articles)
+   nella root del repository GitHub collegato al dominio
+   ATTENZIONE: la cartella images/ contiene gia' il logo.png nuovo,
+   non sovrascriverlo con una versione vecchia
+3. Aggiungi le tue foto reali (primapagina, chisiamo, portfolio, articoli)
+4. Fai commit/push: GitHub Pages aggiorna il sito in pochi minuti
+
+DA FARE QUANDO DISPONIBILE:
+- Link alla scheda Google Business (placeholder nel footer homepage)
+- ID Google Analytics e Search Console (placeholder nel cookie banner)

@@ -1,0 +1,533 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                  🌿 CI.EMME GIARDINI ZEN - SITO COMPLETO 🌿              ║
+║                                                                            ║
+║         Progetto Web Professionale - Agosto 2024                          ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ FILE PRONTI PER L'USO (9 File HTML)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. index.html (30 KB)
+   ├─ Homepage completa
+   ├─ Sezioni cliccabili
+   ├─ "Scopri di più" bottoni su tutte le sezioni
+   ├─ Call to action contatti
+   ├─ WhatsApp button fisso
+   └─ Partita IVA nel footer: 03120250166
+
+2. chi-siamo.html (17 KB)
+   ├─ Pagina Chi Siamo
+   ├─ Presentazione aziendale
+   ├─ Valori aziendali
+   ├─ CTA contatti a fine pagina
+   └─ Cookie banner
+
+3. servizi.html (19 KB)
+   ├─ 6 Servizi con descrizioni complete
+   ├─ Grid responsive
+   ├─ CTA contatti a fine pagina
+   └─ Cookie banner
+
+4. portfolio.html (22 KB) ⭐ DINAMICO
+   ├─ Carica automaticamente fino a 30 foto
+   ├─ Foto da: images/portfolio-1.jpg → portfolio-30.jpg
+   ├─ Placeholder automatico se foto manca
+   ├─ Grid responsive
+   ├─ Hover effect elegante
+   ├─ CTA contatti a fine pagina
+   └─ Cookie banner + Google Analytics
+
+5. metodo.html (14 KB)
+   ├─ 4 Step del processo (Visione, Design, Esecuzione, Armonia)
+   ├─ Design minimalista
+   ├─ Numerazione elegante
+   ├─ CTA contatti a fine pagina
+   └─ Cookie banner
+
+6. articoli.html (22 KB) ⭐ DINAMICO
+   ├─ Griglia 20 articoli (responsive)
+   ├─ Foto automatiche da: articles/articolo1.jpg → articolo20.jpg
+   ├─ Titolo + intro breve per ogni articolo
+   ├─ Pulsante "Scopri di più" su ogni articolo
+   ├─ Link automatici a articolo1.html → articolo20.html
+   ├─ Placeholder se foto manca
+   ├─ CTA contatti a fine pagina
+   └─ Cookie banner + Google Analytics
+
+7. articolo1-TEMPLATE.html (22 KB) 📋 DA DUPLICARE
+   ├─ Template per articoli individuali
+   ├─ Foto in alto (articles/articolo1.jpg)
+   ├─ Titolo + Data + Tempo lettura
+   ├─ Contenuto articolo formattato
+   ├─ Link "Torna agli articoli"
+   ├─ CTA contatti a fine pagina
+   ├─ Cookie banner
+   └─ ISTRUZIONI DUPLICAZIONE SOTTO ⬇️
+
+8. faq.html (17 KB)
+   ├─ 6 Domande frequenti espandibili
+   ├─ Toggle animato
+   ├─ Risposte complete
+   ├─ CTA contatti a fine pagina
+   └─ Cookie banner
+
+9. README.md
+   └─ Guida completa al sito (che stai leggendo ora)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 PASSO 1: DUPLICARE I FILE ARTICOLI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Devi creare 20 file articolo dal template:
+
+PROCEDURA:
+1. Copia articolo1-TEMPLATE.html
+2. Incolla 20 volte nella stessa cartella
+3. Rinomina i file così:
+   
+   ✓ articolo1.html
+   ✓ articolo2.html
+   ✓ articolo3.html
+   ✓ articolo4.html
+   ✓ articolo5.html
+   ✓ articolo6.html
+   ✓ articolo7.html
+   ✓ articolo8.html
+   ✓ articolo9.html
+   ✓ articolo10.html
+   ✓ articolo11.html
+   ✓ articolo12.html
+   ✓ articolo13.html
+   ✓ articolo14.html
+   ✓ articolo15.html
+   ✓ articolo16.html
+   ✓ articolo17.html
+   ✓ articolo18.html
+   ✓ articolo19.html
+   ✓ articolo20.html
+
+Per OGNI file, modifica:
+- Line 5: <title>TITOLO ARTICOLO | CI.EMME Giardini Zen</title>
+- Line 280 (circa): <img src="articles/articolo1.jpg" alt="...">
+- Line 282: <span class="article-date">DATA</span>
+- Line 283: <span>Tempo di lettura: X min</span>
+- Line 287: <h1>TITOLO ARTICOLO</h1>
+- Line 289: <p class="article-intro">Breve intro...</p>
+- Lines 291+: Il contenuto dell'articolo (in tag <p>)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🖼️ PASSO 2: CARICARE LE FOTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CARTELLA 1: images/ (Portfolio)
+├─ portfolio-1.jpg
+├─ portfolio-2.jpg
+├─ ...
+└─ portfolio-30.jpg (opzionale, load dinamico)
+
+CARTELLA 2: articles/ (Articoli)
+├─ articolo1.jpg (250x180px consigliato)
+├─ articolo2.jpg
+├─ ...
+└─ articolo20.jpg (opzionale)
+
+⚠️ IMPORTANTE:
+Se una foto manca, il sito mostra un placeholder SVG automaticamente.
+Non devi caricare tutte le foto se non le hai.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚙️ PASSO 3: CONFIGURARE GOOGLE ANALYTICS E SEARCH CONSOLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nei file che hanno il cookie banner (articoli.html, portfolio.html, 
+articolo1.html+duplicati), trova il JavaScript e sostituisci:
+
+PRIMA:
+```javascript
+script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'
+gtag('config', 'G-XXXXXXXXXX');
+meta.content = 'XXXXXXXXXXXXX';
+```
+
+DOPO (con i TUOI dati):
+```javascript
+script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TUOIDID'
+gtag('config', 'G-TUOIDID');
+meta.content = 'TUOTOKEN_VERIFICA';
+```
+
+Come trovare i tuoi dati:
+1. Google Analytics: Impostazioni → ID Proprietà (G-...)
+2. Google Search Console: Verifica proprietà → Token (in <meta>)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 PASSO 4: AGGIORNAMENTI OPZIONALI SU INDEX.HTML
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Se vuoi aggiungere i "Scopri di più" bottoni e il cookie banner anche 
+all'homepage, vedi il file index-update.txt negli outputs.
+
+Ma NOTA: index.html è GIÀ funzionante come è, non è obbligatorio 
+aggiornarlo.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 STRUTTURA FINALE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ciemme-giardini/
+│
+├── index.html
+├── chi-siamo.html
+├── servizi.html
+├── portfolio.html
+├── metodo.html
+├── articoli.html
+├── articolo1.html ← Duplica da template
+├── articolo2.html ← Duplica da template
+├── ... fino a articolo20.html
+├── faq.html
+│
+├── images/
+│   ├── portfolio-1.jpg
+│   ├── portfolio-2.jpg
+│   └── ... fino a portfolio-30.jpg
+│
+├── articles/
+│   ├── articolo1.jpg
+│   ├── articolo2.jpg
+│   └── ... fino a articolo20.jpg
+│
+└── README.md (questo file)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ FEATURE IMPLEMENTATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ HOMEPAGE (index.html):
+  • Logo bambù SVG verde stilizzato
+  • 4 Sezioni cliccabili con link
+  • Bottone "Scopri di più" su ogni sezione
+  • Hero section con tagline
+  • Contatti completi
+  • WhatsApp button fisso in basso a destra
+  • Footer con Partita IVA: 03120250166
+  • Design responsive mobile-first
+
+✅ TUTTE LE PAGINE:
+  • Menu hamburger mobile
+  • Navigazione coerente
+  • Logo su ogni pagina
+  • WhatsApp button sempre visibile
+  • Footer con contatti e Partita IVA
+  • Stili inline (nessun CSS esterno)
+  • Responsive design (<= 768px)
+  • Load veloce
+
+✅ PAGINE DEDICATE (chi-siamo, servizi, portfolio, metodo, faq):
+  • Contenuti completi e personalizzati
+  • Sezione CTA contatti
+  • Call to action a fine pagina
+
+✅ PORTFOLIO (portfolio.html):
+  • Carica dinamicamente fino a 30 foto
+  • Grid responsive (auto-fill)
+  • Overlay hover elegante
+  • Placeholder SVG automatico
+  • Descrizioni per ogni progetto
+
+✅ ARTICOLI (articoli.html):
+  • Griglia di 20 articoli
+  • Foto thumbnail automatiche
+  • Titolo + breve intro
+  • "Scopri di più" su ogni articolo
+  • Link automatici a articolo1.html → articolo20.html
+  • Responsive (20 col su desktop, 1-4 su mobile)
+
+✅ PAGINE ARTICOLI INDIVIDUALI (articolo1.html → articolo20.html):
+  • Foto grande in alto (800x400px)
+  • Titolo articolo
+  • Data e tempo lettura
+  • Contenuto formattato
+  • Link "Torna agli articoli"
+  • CTA contatti a fine pagina
+  • Responsive mobile
+
+✅ COOKIE BANNER (GDPR Compliant):
+  • Su tutte le pagine
+  • Accetta/Rifiuta cookie
+  • Carica Google Analytics al consenso
+  • Carica Search Console Verification
+  • LocalStorage per ricordare scelta
+  • Conforme normativa europea
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 RESPONSIVE DESIGN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Desktop (≥ 769px):
+  • Menu navbar completo
+  • Grid 3-4 colonne
+  • Tutti gli effetti hover
+  • Sidebar/layout normal
+
+Mobile (≤ 768px):
+  • Menu hamburger
+  • Grid 1-2 colonne
+  • Touch-friendly buttons
+  • Full-width layout
+  • Stacked content
+
+Testato su:
+  • iPhone / Android
+  • Tablet
+  • Desktop
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎨 COLORI E BRANDING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Palette Colori (nei CSS):
+  • --sage-green: #7a9a7a (principale - bottoni, link)
+  • --sage-light: #a8c8a8 (accenti)
+  • --sage-dark: #5a7a5a (hover states)
+  • --deep-black: #1a1a1a (testo)
+  • --warm-white: #f5f3f0 (background)
+  • --champagne: #c9a961 (accento lusso - non usato)
+
+Typography:
+  • Display: Cormorant Garamond (titoli)
+  • Body: Inter (testo)
+
+Logo:
+  • SVG bambù verde 60x60px
+  • Testo "CI.EMME" in verde
+  • Responsive su tutte le pagine
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 DATI AZIENDALI INSERITI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Azienda: CI.EMME Giardini Zen
+Indirizzo: Viale Italia 3, 24060 Villongo (BG)
+Telefono: +39 348 703 6996
+Email: Claudio.manutenzioni@gmail.com
+Partita IVA: 03120250166 ✓ INSERITA
+
+WhatsApp Link:
+https://wa.me/393487036996?text=Ciao%2C%20vorrei%20informazioni%20su%20CI.EMME%20Giardini%20Zen
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚡ PERFORMANCE TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Ottimizza le immagini:
+   • Portfolio: 400-500px width (JPG 80-90% quality)
+   • Articoli thumb: 250x180px (JPG 80% quality)
+   • Articoli full: 800x400px (JPG 85% quality)
+   • Usa WebP se possibile (fallback JPG)
+
+2. Lazy Loading (opzionale):
+   • Aggiungi loading="lazy" ai tag <img>
+   • Migliora performance su pagine molte foto
+
+3. Compression:
+   • Gzip sui server
+   • Minify CSS/JS (opzionale, stili inline)
+
+4. SEO Basics:
+   • Meta descriptions sui file HTML
+   • Alt text su tutte le immagini
+   • Sitemap.xml (opzionale)
+   • robots.txt (opzionale)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔗 LINK STRUTTURA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Homepage: /index.html
+│
+├─ Chi Siamo: /chi-siamo.html
+├─ Servizi: /servizi.html
+├─ Portfolio: /portfolio.html (30 foto dinamiche)
+├─ Metodo: /metodo.html
+├─ Articoli: /articoli.html (20 articoli dinamici)
+│  ├─ Articolo 1: /articolo1.html
+│  ├─ Articolo 2: /articolo2.html
+│  └─ ... articolo20.html
+└─ FAQ: /faq.html
+
+WhatsApp: wa.me/393487036996
+Email: Claudio.manutenzioni@gmail.com
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🆘 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: Foto portfolio non appaiono
+Solution: 
+  1. Verifica che siano nella cartella 'images/'
+  2. Rinomina come portfolio-1.jpg, portfolio-2.jpg, ecc.
+  3. Il sito mostra placeholder automaticamente se mancano
+
+Problem: Articoli non caricano
+Solution:
+  1. Verifica che i file siano articolo1.html, articolo2.html, ecc.
+  2. Foto devono essere in 'articles/articolo1.jpg', ecc.
+  3. Il sito mostra placeholder se foto manca
+
+Problem: Cookie banner non scompare
+Solution:
+  1. Testa in finestra privata/incognito
+  2. Clearare localStorage del browser
+  3. Prova il bottone "Accetta tutto"
+
+Problem: Menu hamburger non funziona
+Solution:
+  1. Assicurati di essere su mobile (≤768px)
+  2. JavaScript abilitato nel browser
+  3. Controlla la console per errori
+
+Problem: Link non funzionano
+Solution:
+  1. Verifica che i file siano nella stessa cartella
+  2. Usa percorsi relativi (senza / iniziale)
+  3. Controlla maiuscole/minuscole dei nomi file
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 RESOURCES UTILIZZATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Google Fonts:
+  • Cormorant Garamond (serif - titoli)
+  • Inter (sans-serif - body)
+
+Google Analytics:
+  • ID: G-XXXXXXXXXX (DA SOSTITUIRE)
+
+Google Search Console:
+  • Token: XXXXXXXXXXXXX (DA SOSTITUIRE)
+
+Browser Compatibility:
+  • Chrome/Chromium ✓
+  • Firefox ✓
+  • Safari ✓
+  • Edge ✓
+  • Mobile browsers ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ CHECKLIST PRIMA DEL LANCIO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PRE-UPLOAD:
+  [ ] Duplica articolo1-TEMPLATE.html in 20 file
+  [ ] Modifica titoli e contenuti articoli
+  [ ] Carica foto portfolio nella cartella images/
+  [ ] Carica foto articoli nella cartella articles/
+  [ ] Sostituisci Google Analytics ID
+  [ ] Sostituisci Google Search Console token
+  [ ] Testa tutti i link su localhost
+  [ ] Testa responsive su mobile
+  [ ] Verifica cookies funzionano
+  [ ] Controlla console per errori
+
+UPLOAD:
+  [ ] Upload su hosting/server
+  [ ] Verifica che i file siano accessibili
+  [ ] Testa da diversi browser
+  [ ] Testa da diversi dispositivi mobile
+  [ ] Verifica WhatsApp link funziona
+  [ ] Verifica email contact
+
+POST-UPLOAD:
+  [ ] Configura Google Analytics
+  [ ] Verifica in Google Search Console
+  [ ] Aggiungi sitemap.xml
+  [ ] Verifica robots.txt
+  [ ] Setup SSL/HTTPS
+  [ ] Monitora traffico
+  [ ] Richiedi indexing a Google
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 NOTE IMPORTANTI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. STILI INLINE
+   Tutti gli stili sono inline nei file HTML.
+   Non c'è un file CSS esterno per semplicità.
+   Se vuoi spostare i stili in CSS esterno, copia tutto da <style>.
+
+2. NESSUNA DIPENDENZA ESTERNA
+   Il sito NON richiede librerie JavaScript.
+   Solo vanilla JavaScript per funzionalità base.
+   Google Fonts vengono caricate da CDN (default HTML).
+
+3. DINAMICO
+   Portfolio e Articoli si caricano AUTOMATICAMENTE.
+   Non devi modificare il codice per aggiungere foto.
+   Carica le foto nella cartella giusta e il sito le trova.
+
+4. FALLBACK
+   Se una foto manca, il sito mostra un placeholder SVG.
+   Il sito NON si rompe se mancano foto.
+   È una scelta di design (puoi togliere i placeholder se vuoi).
+
+5. LOCALHOST TESTING
+   Per testare offline:
+   - Usa Live Server su VSCode
+   - Oppure python3 -m http.server
+   - Non serve un server locale completo
+
+6. HOSTING SUGGESTIONS
+   - Netlify (free tier, facile)
+   - GitHub Pages (free, per repo static)
+   - Vercel (free tier ottimo)
+   - Aruba/Godaddy (Italia, paid)
+   - Hosting locale (Altervista, Keliweb)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📞 CONTATTI / SUPPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Per domande sul sito:
+
+Azienda:        CI.EMME Giardini Zen
+Telefono:       +39 348 703 6996
+Email:          Claudio.manutenzioni@gmail.com
+Indirizzo:      Viale Italia 3, 24060 Villongo (BG)
+Partita IVA:    03120250166
+
+WhatsApp:       https://wa.me/393487036996
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 PROGETTO COMPLETATO!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Versione: 1.0
+Data: Agosto 2024
+Browser: Chrome, Firefox, Safari, Edge
+Mobile: iOS, Android
+Performance: Ottimizzato
+
+Pronto per il lancio! 🚀
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
